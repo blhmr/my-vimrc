@@ -1,7 +1,9 @@
 "=== VIM SETTINGS ===================================="
 
+" Mainly for C developers
+
 call plug#begin()
-Plug 'sainnhe/sonokai'
+Plug 'mhartington/oceanic-next'
 Plug 'bluz71/vim-mistfly-statusline'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
@@ -21,8 +23,7 @@ set cursorline
 set noshowmode laststatus=2
 
 " Colorscheme
-" colorscheme OceanicNext
-colorscheme sonokai
+colorscheme OceanicNext
 
 " Autocompletion
 inoremap { {}<Esc>ha
