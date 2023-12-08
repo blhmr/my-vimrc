@@ -1,35 +1,59 @@
 "=== VIM SETTINGS ===================================="
 
-" Mainly for C developers
-
 call plug#begin()
-Plug 'mhartington/oceanic-next'
-Plug 'bluz71/vim-mistfly-statusline'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'itchyny/lightline.vim'
+Plug 'sainnhe/gruvbox-material'
 call plug#end()
 
-" Basic config
+" Basic default config
 syntax enable
 filetype plugin indent on
+set encoding=UTF-8
 set hlsearch incsearch ignorecase
 set number relativenumber
-set encoding=UTF-8
 set mouse=a
+set showmatch
+set smarttab
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set background=dark 
+set nocompatible
 set cursorline
 :highlight Cursorline cterm=bold ctermbg=black
 
-" Status line
-set noshowmode laststatus=2
+if has('termguicolors')
+	set termguicolors
+endif
 
+" C/C++ syntax highlighting
+let g:cpp_attributes_highlight = 1
+let g:cpp_member_highlight = 1
+
+" Statusline
+set laststatus=2
+let g:lightline = {
+			\ 'colorscheme': 'gruvbox_material',
+			\ 'separator': { 'left': '', 'right': '' },
+			\ 'subseparator': { 'left': '', 'right': '' }
+			\ }
 " Colorscheme
-colorscheme OceanicNext
+colorscheme gruvbox-material
 
 " Autocompletion
 inoremap { {}<Esc>ha
+inoremap [ []<Esc>ha
 inoremap ( ()<Esc>ha
 inoremap " ""<Esc>ha
 inoremap ' ''<Esc>ha
 
 " Remapping
 nmap <C-x> :NERDTreeToggle<CR>
+map <C-Down> :m +1<CR>
+map <C-Up> :m -2<CR>
+
+" Cursor
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
