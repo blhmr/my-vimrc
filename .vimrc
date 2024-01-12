@@ -4,6 +4,7 @@ call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/lightline.vim'
+Plug 'vimsence/vimsence'
 Plug 'sainnhe/gruvbox-material'
 call plug#end()
 
@@ -27,6 +28,10 @@ set cursorline
 if has('termguicolors')
 	set termguicolors
 endif
+
+" Font
+set guifont=Fira\ Code\ Medium:h10
+let g:NERDTreeShowDevIcons = 1
 
 " C/C++ syntax highlighting
 let g:cpp_attributes_highlight = 1
@@ -57,3 +62,6 @@ map <C-Up> :m -2<CR>
 " Cursor
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
+
+" NERDTree
+let g:NERDTreeChDirMode = 2
