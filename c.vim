@@ -51,6 +51,9 @@ syn keyword cBoolean true false TRUE FALSE
 hi def link cBoolean  Boolean
 hi def link cAnsiName Identifier
 
+" Highlight words ending with '_t' as data types
+syn match cDataType "\<\h\w*_t\>" contains=ALL
+hi def link cDataType DataType
 
 " Highlight all standard C keywords as Statement
 " This is very similar to what other IDEs and editors do
@@ -60,3 +63,5 @@ if get(g:, 'cpp_simple_highlight', 0)
     hi! def link cTypedef      Statement
     hi! def link cLabel        Statement
 endif
+
+
