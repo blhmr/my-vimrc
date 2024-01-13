@@ -1,11 +1,11 @@
 "=== VIM SETTINGS ===================================="
 
 call plug#begin()
-Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
-Plug 'itchyny/lightline.vim'
-Plug 'vimsence/vimsence' // Discord rich presence
-Plug 'sainnhe/gruvbox-material'
+Plug 'preservim/nerdtree' " Nerd tree
+Plug 'ryanoasis/vim-devicons' " Dev icons
+Plug 'itchyny/lightline.vim' " Status bar
+Plug 'vimsence/vimsence' " Discord rich presence
+Plug 'sainnhe/gruvbox-material' "Colorscheme
 call plug#end()
 
 " Basic default config
