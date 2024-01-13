@@ -4,7 +4,7 @@ call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/lightline.vim'
-Plug 'vimsence/vimsence'
+Plug 'vimsence/vimsence' // Discord rich presence
 Plug 'sainnhe/gruvbox-material'
 call plug#end()
 
