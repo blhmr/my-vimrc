@@ -6,6 +6,10 @@ For C developers, place the `c.vim` file in `~.vim/after/syntax`
 The `c.vim` file is not mine, it's based on: https://github.com/octol/vim-cpp-enhanced-highlight
 Though, some modifications were made (highlighting every word that ends with `_t` (typedef structs))
 
+Also comes with a Discord Rich Presence plugin !
+Preview:
+<img src="https://media.discordapp.net/attachments/1068507358013173810/1195684363061428244/discord.png?ex=65b4e2d6&is=65a26dd6&hm=3b3c79e15807845de0ede7fd17a7c2cc9ae672fa623a4b4d0f67826b10076b77&=&format=webp&quality=lossless&width=301&height=439">
+
 # plugin manager
 I use vim-plug, so install it before using this vim config
 
