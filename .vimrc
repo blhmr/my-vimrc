@@ -1,11 +1,14 @@
-"=== VIM SETTINGS ===================================="
+"=== HATIM'S PERSONAL VIM CONFIG ===================================="
 
 call plug#begin()
-Plug 'preservim/nerdtree' " Nerd tree
-Plug 'ryanoasis/vim-devicons' " Dev icons
-Plug 'itchyny/lightline.vim' " Status bar
-Plug 'vimsence/vimsence' " Discord rich presence
-Plug 'sainnhe/gruvbox-material' "Colorscheme
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'itchyny/lightline.vim'
+Plug 'vimsence/vimsence'
+Plug 'ervandew/supertab'
+Plug 'sainnhe/gruvbox-material'
+Plug 'mhinz/vim-startify'
 call plug#end()
 
 " Basic default config
@@ -23,19 +26,19 @@ set softtabstop=4
 set background=dark 
 set nocompatible
 set cursorline
-:highlight Cursorline cterm=bold ctermbg=black
-
-if has('termguicolors')
-	set termguicolors
-endif
-
-" Font
-set guifont=Fira\ Code\ Medium:h10
-let g:NERDTreeShowDevIcons = 1
+set termguicolors
 
 " C/C++ syntax highlighting
 let g:cpp_attributes_highlight = 1
 let g:cpp_member_highlight = 1
+
+" NERDTree + Dev Icons
+let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
+let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
+let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
+
 
 " Statusline
 set laststatus=2
@@ -44,7 +47,9 @@ let g:lightline = {
 			\ 'separator': { 'left': '', 'right': '' },
 			\ 'subseparator': { 'left': '', 'right': '' }
 			\ }
+
 " Colorscheme
+let g:gruvbox_material_enable_italic = 1
 colorscheme gruvbox-material
 
 " Autocompletion
@@ -62,6 +67,3 @@ map <C-Up> :m -2<CR>
 " Cursor
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
-
-" NERDTree
-let g:NERDTreeChDirMode = 2
